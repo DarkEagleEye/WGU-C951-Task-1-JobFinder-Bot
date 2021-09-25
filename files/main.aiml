@@ -34,7 +34,10 @@
 </category>
 <category>
     <pattern>*</pattern>
-    <template>I'm not sure how to respond to that.</template>
+    <template>I'm not sure how to respond to that.<br/>
+    <br/>
+    Say 'HI' to start.
+    </template>
 </category>
 <category>
     <pattern>TELLME</pattern>
