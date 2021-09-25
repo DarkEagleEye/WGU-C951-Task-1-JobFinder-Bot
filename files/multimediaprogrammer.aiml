@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<category>
+    <pattern>MULTIMEDIADEVELOPER</pattern>
+    <template>
+        Multimedia Developer<br/>
+        <br/>
+        So, graphics are your thing.  Drawing can be used for many parts of 
+        multimedia.  For example, you can develop icons, splash screens, 
+        videos, animations, and may other amazing things.<br/>
+        <br/>
+        Look around at everything you do on a computer, someone drew everything
+        you see.  Including this text.<br/>
+        <button><text>Test me for the best job</text>
+            <postback>TestMe</postback></button>
+        <button><text>Tell me about the jobs</text>
+            <postback>TellMe</postback></button>
+        <button><text>I'm not interested</text>
+            <postback>IDontWantYourHelp</postback></button>
+    </template>
+</category>
+</aiml>

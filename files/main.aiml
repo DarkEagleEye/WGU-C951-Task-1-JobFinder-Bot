@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<category>
+    <pattern>HELLO</pattern>
+    <template>
+        <condition name="name">
+            <li value="unknown">Hello.</li>
+            <li>Hello <get name="name" />.</li>
+        </condition><br/><br/>
+        There are many career fields you can choose with a computer science 
+        degree.  It all depends upon what your interests are.  I can help you
+        decide upon the right field for you if you would like, or I could
+        just provide information on a select field.
+        <br/>
+        <br/>
+        What would you like to do?
+        <button><text>Test me for the best job</text>
+            <postback>TestMe</postback></button>
+        <button><text>Tell me about the jobs</text>
+            <postback>TellMe</postback></button>
+        <button><text>I'm not interested</text>
+            <postback>IDontWantYourHelp</postback></button>
+    </template>
+</category>
+<category>
+    <pattern>HI</pattern>
+    <template><srai>HELLO</srai></template>
+</category>
+<category>
+    <pattern>MY NAME IS *</pattern>
+    <template><think><set name="name"><star/></set></think>
+        <srai>HELLO</srai>
+    </template>
+</category>
+<category>
+    <pattern>*</pattern>
+    <template>I'm not sure how to respond to that.</template>
+</category>
+<category>
+    <pattern>TELLME</pattern>
+    <template>
+        <button>
+            <text>Database Administrator</text>
+            <postback>dbadmin</postback>
+        </button>
+        <button>
+            <text>Software Applications Developer</text>
+            <postback>softwaredeveloper</postback>
+        </button>
+        <button>
+            <text>Web Developer</text>
+            <postback>webdeveloper</postback>
+        </button>
+        <button>
+            <text>Multimedia Developer</text>
+            <postback>multimediadeveloper</postback>
+        </button>
+            <button>
+                <text>Game Developer</text>
+                <postback>gamedeveloper</postback>
+            </button>
+        <button>
+            <text>Cyber Security</text>
+            <postback>cybersecurity</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>IDONTWANTYOURHELP</pattern>
+    <template>Good luck!</template>
+</category>
+</aiml>
+

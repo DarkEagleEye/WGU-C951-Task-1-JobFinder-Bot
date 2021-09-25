@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<category>
+    <pattern>TESTME</pattern>
+    <template>
+    Choose an area of interest to rate: <br/>
+    <button>
+        <condition name="coding">
+            <li value="1"><text>Coding - Like</text></li>
+            <li value="2"><text>Coding - Neutral</text></li>
+            <li value="3"><text>Coding - Dislike</text></li>
+            <li><text>Coding</text></li>
+        </condition>
+        <postback>Coding</postback></button>
+    <button>
+        <condition name="drawing">
+            <li value="1"><text>Drawing - Like</text></li>
+            <li value="2"><text>Drawing - Neutral</text></li>
+            <li value="3"><text>Drawing - Dislike</text></li>
+            <li><text>Drawing</text></li>
+        </condition>
+        <postback>Drawing</postback></button>
+    <button>
+        <condition name="security">
+            <li value="1"><text>Security - Like</text></li>
+            <li value="2"><text>Security - Neutral</text></li>
+            <li value="3"><text>Security - Dislike</text></li>
+            <li><text>Security</text></li>
+        </condition>
+        <postback>Security</postback></button>
+    <button>
+        <condition name="data">
+            <li value="1"><text>Data - Like</text></li>
+            <li value="2"><text>Data - Neutral</text></li>
+            <li value="3"><text>Data - Dislike</text></li>
+            <li><text>Data</text></li>
+        </condition>
+        <postback>Data</postback></button>
+    <button>
+        <condition name="internet">
+            <li value="1"><text>Internet - Like</text></li>
+            <li value="2"><text>Internet - Neutral</text></li>
+            <li value="3"><text>Internet - Dislike</text></li>
+            <li><text>Internet</text></li>
+        </condition>
+        <postback>Internet</postback></button>
+    <button><text>Determine Job</text><postback>Determine</postback></button>
+    </template>
+</category>
+
+<category>
+    <pattern>HEADER</pattern>
+    <template>
+        How do you feel about <br/>
+    </template>
+</category>
+
+<category>
+    <pattern>FOOTER</pattern>
+    <template>
+        <button><text>Like</text><postback>value 1</postback></button>
+        <button><text>Neutral</text><postback>value 2</postback></button>
+        <button><text>Dislike</text><postback>value 3</postback></button>
+    </template>
+</category>
+
+<category>
+    <pattern>value *</pattern>
+    <template>
+        <think>
+            <condition name="category" value="coding">
+                <set name="coding"><star/></set>
+            </condition>
+            <condition name="category" value="drawing">
+                <set name="drawing"><star/></set>
+            </condition>
+            <condition name="category" value="security">
+                <set name="security"><star/></set>
+            </condition>
+            <condition name="category" value="data">
+                <set name="data"><star/></set>
+            </condition>
+            <condition name="category" value="internet">
+                <set name="internet"><star/></set>
+            </condition>
+        </think>
+        I will remember that.  <br/><br/>
+        <srai>testme</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>CODING</pattern>
+    <template>
+        <srai>HEADER</srai>
+        developing code?
+        <srai>Footer</srai>
+        <think><set name="category">coding</set></think>
+    </template>
+</category>
+
+<category>
+    <pattern>DRAWING</pattern>
+    <template>
+        <srai>HEADER</srai>
+        drawing or designing graphics?
+        <srai>Footer</srai>
+        <think><set name="category">drawing</set></think>
+    </template>
+</category>
+
+<category>
+    <pattern>SECURITY</pattern>
+    <template>
+        <srai>HEADER</srai>
+        protecting and securing information?
+        <srai>Footer</srai>
+        <think><set name="category">security</set></think>
+    </template>
+</category>
+
+<category>
+    <pattern>DATA</pattern>
+    <template>
+        <srai>HEADER</srai>
+        maintaining and organizing data?
+        <srai>Footer</srai>
+        <think><set name="category">data</set></think>
+    </template>
+</category>
+
+<category>
+    <pattern>INTERNET</pattern>
+    <template>
+        <srai>HEADER</srai>
+        working with the internet?
+        <srai>Footer</srai>
+        <think><set name="category">internet</set></think>
+    </template>
+</category>
+
+<category>
+    <pattern>DETERMINE</pattern>
+    <template>The following jobs are a match for you. <br/>
+    <srai>showdbadminbutton</srai>
+    <srai>showsoftwaredeveloperbutton</srai>
+    <srai>showwebdeveloperbutton</srai>
+    <srai>showmultimediabutton</srai>
+    <srai>showgamedeveloperbutton</srai>
+    <srai>showcybersecuritybutton</srai>
+    <button>
+        <text>Update Preferences</text>
+        <postback>testme</postback>
+    </button>
+    </template>
+</category>
+
+<category>
+    <pattern>SHOWDBADMINBUTTON</pattern>
+    <template>
+        <condition name="data">
+            <li value="3"></li>
+            <li>
+            <button>
+                <text>Database Administrator</text>
+                <postback>dbadmin</postback>
+            </button>
+            </li>
+        </condition>
+    </template>
+</category>
+
+<category>
+    <pattern>SHOWSOFTWAREDEVELOPERBUTTON</pattern>
+    <template>
+        <condition name="coding">
+            <li value="3"></li>
+            <li>
+            <button>
+                <text>Software Applications Developer</text>
+                <postback>softwaredeveloper</postback>
+            </button>
+            </li>
+        </condition>
+    </template>
+</category>
+
+<category>
+    <pattern>SHOWWEBDEVELOPERBUTTON</pattern>
+    <template>
+        <condition name="internet">
+            <li value="3"></li>
+            <li>
+            <condition name="coding">
+                <li value="3"></li>
+                <li>
+                <button>
+                    <text>Web Developer</text>
+                    <postback>webdeveloper</postback>
+                </button>
+                </li>
+            </condition>
+            </li>
+        </condition>
+    </template>
+</category>
+
+<category>
+    <pattern>SHOWMULTIMEDIABUTTON</pattern>
+    <template>
+        <condition name="drawing">
+            <li value="3"></li>
+            <li>
+            <button>
+                <text>Multimedia Developer</text>
+                <postback>multimediadeveloper</postback>
+            </button>
+            </li>
+        </condition>
+    </template>
+</category>
+
+<category>
+    <pattern>SHOWGAMEDEVELOPERBUTTON</pattern>
+    <template>
+        <condition name="coding">
+            <li value="3"></li>
+            <li>
+            <condition name="drawing">
+                <li value="3"></li>
+                <li>
+                <button>
+                    <text>Game Developer</text>
+                    <postback>gamedeveloper</postback>
+                </button>
+                </li>
+            </condition>
+            </li>
+        </condition>
+    </template>
+</category>
+
+<category>
+    <pattern>SHOWCYBERSECURITYBUTTON</pattern>
+    <template>
+        <condition name="security">
+            <li value="3"></li>
+            <li>
+            <button>
+                <text>Cyber Security</text>
+                <postback>cybersecurity</postback>
+            </button>
+            </li>
+        </condition>
+    </template>
+</category>
+
+</aiml>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<category>
+    <pattern>CLEAR</pattern>
+    <template><srai>FORGET</srai></template>
+</category>
+<category>
+    <pattern>CLEAR *</pattern>
+    <template><srai>FORGET</srai></template>
+</category>
+<category>
+    <pattern>FORGET</pattern>
+    <template>Memory cleared.  😒
+        <think>
+            <set name="name">unknown</set>
+            <set name="coding">unknown</set>
+            <set name="security">unknown</set>
+            <set name="data">unknown</set>
+            <set name="internet">unknown</set>
+            <set name="drawing">unknown</set>
+        </think>
+    </template>
+</category>
+<category>
+    <pattern>FORGET *</pattern>
+    <template><srai>FORGET</srai></template>
+</category>
+<category>
+    <pattern>RESET</pattern>
+    <template><srai>FORGET</srai></template>
+</category>
+</aiml>

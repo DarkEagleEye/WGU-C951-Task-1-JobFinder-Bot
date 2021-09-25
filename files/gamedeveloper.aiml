@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<category>
+    <pattern>GAMEDEVELOPER</pattern>
+    <template>
+        Game Developer<br/>
+        <br/>
+        Pow!  Bang!  Boom!  Games are everywhere.  On computers, phones, and
+        people pay hundreds of dollars for game systems just to run games on.
+        The gaming industry is booming and is ready for the next adventurer to
+        explore this career.  Don't miss out on the experience.<br/>
+        <br/>
+        <button><text>Test me for the best job</text>
+            <postback>TestMe</postback></button>
+        <button><text>Tell me about the jobs</text>
+            <postback>TellMe</postback></button>
+        <button><text>I'm not interested</text>
+            <postback>IDontWantYourHelp</postback></button>
+    </template>
+</category>
+</aiml>

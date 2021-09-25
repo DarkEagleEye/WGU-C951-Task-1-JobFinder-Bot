@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<category>
+    <pattern>SOFTWAREDEVELOPER</pattern>
+    <template>
+        Software Application Developer<br/>
+        <br/>
+        Coding is not for everyone.  It can be difficult at times, but a 
+        developer likes the challenge.  Don't keep them working on the same
+        thing for too long though because they tend to get bored.<br/>
+        <br/>
+        This job can be fast pace and demanding but for the right person it is
+        "the" job to have.<br/>
+        <button><text>Test me for the best job</text>
+            <postback>TestMe</postback></button>
+        <button><text>Tell me about the jobs</text>
+            <postback>TellMe</postback></button>
+        <button><text>I'm not interested</text>
+            <postback>IDontWantYourHelp</postback></button>
+    </template>
+</category>
+</aiml>

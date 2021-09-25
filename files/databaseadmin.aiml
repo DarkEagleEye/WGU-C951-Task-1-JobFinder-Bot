@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<category>
+    <pattern>DBADMIN</pattern>
+    <template>
+        Database Administrator<br/>
+        <br/>
+        This is the exciting field of organizing and maintaining large amounts  
+        of data.  People rely on you to keep the data safe from mistakes,
+        failures, natural disasters, and hackers.<br/>
+        <br/>
+        This job can be fast paced and demanding but for the right person it is
+        "the" job to have.<br/>
+        <button><text>Test me for the best job</text>
+            <postback>TestMe</postback></button>
+        <button><text>Tell me about the jobs</text>
+            <postback>TellMe</postback></button>
+        <button><text>I'm not interested</text>
+            <postback>IDontWantYourHelp</postback></button>
+    </template>
+</category>
+</aiml>

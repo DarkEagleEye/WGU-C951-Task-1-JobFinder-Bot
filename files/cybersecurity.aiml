@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<category>
+    <pattern>CYBERSECURITY</pattern>
+    <template>
+        Cyber Security<br/>
+        <br/>
+        Today, protecting people's data is a very important thing.  Most 
+        people work with a computer on a daily basis.  If it's a PC, phone, ATM, 
+        or even a car, you're dealing with a device that some hacker is looking 
+        to take advantage of.  Are you up for the challenge to prevent a hacker 
+        from stealing you friend's, family's, and country's money and 
+        information?<br/>
+        <button><text>Test me for the best job</text>
+            <postback>TestMe</postback></button>
+        <button><text>Tell me about the jobs</text>
+            <postback>TellMe</postback></button>
+        <button><text>I'm not interested</text>
+            <postback>IDontWantYourHelp</postback></button>
+    </template>
+</category>
+</aiml>
